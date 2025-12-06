@@ -2,7 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"> <title>סולטן חשמל ומיזוג – טכנאי מוסמך בירושלים והמרכז</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <title>סולטן חשמל ומיזוג – טכנאי מוסמך בירושלים והמרכז</title>
     <meta name="description" content="סולטן חשמל ומיזוג – טכנאי מוסמך לתיקון והתקנת מזגנים ומוצרי חשמל. שירות מקצועי, נקי ואמין בירושלים, גוש דן והמרכז.">
     <meta name="keywords" content="סולטן חשמל ומיזוג, טכנאי מזגנים, תיקון מקרר, תיקון מדיח, תיקון מייבש, טכנאי מכונת כביסה, חשמלאי מוסמך, ירושלים, המרכז">
     <meta name="robots" content="index,follow">
@@ -11,12 +13,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 	<link rel="icon" href="assets/images/logo-icon.ico">
 
@@ -91,9 +91,8 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.05); z-index: 1000;
             padding: 10px 0; transition: var(--transition);
             border-bottom: 3px solid var(--primary-color);
-            contain: layout paint; /* Performance optimize */
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; position: relative; }
         .logo-styled { display: flex; align-items: center; cursor: pointer; z-index: 1100; }
         .logo-image { height: 80px; width: auto; display: block; }
         .logo-text { display: flex; flex-direction: column; line-height: 1; margin-right: 10px; }
@@ -113,14 +112,23 @@
         }
         .nav-links a:hover::after { width: 100%; }
 
-        .hamburger { display: none; cursor: pointer; font-size: 1.8rem; color: var(--secondary-color); padding: 5px; z-index: 1100; }
+        /* Hamburger Fixed Styles */
+        .hamburger { 
+            display: none; 
+            cursor: pointer; 
+            font-size: 2rem; /* קצת יותר גדול */
+            color: var(--secondary-color); 
+            padding: 10px; /* שטח לחיצה גדול יותר */
+            z-index: 2000; /* הכי גבוה שיש */
+            background: transparent;
+            border: none;
+        }
 
         /* HERO */
         .hero {
             height: 100vh; height: 100dvh; width: 100%; position: relative;
             display: flex; align-items: center; justify-content: center; text-align: center;
             color: #fff; overflow: hidden; margin-top: 0;
-            contain: strict;
         }
         .hero-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -298,8 +306,8 @@
         }
         @media (max-width: 768px) {
             .hamburger { display: block; margin-right: auto; }
-            nav { position: absolute; }
-			.logo-image { height: 70px; }
+            /* הסרת Position Absolute הבעייתי */
+            
             .nav-links {
                 position: fixed; top: 70px; right: -100%; width: 100%; height: calc(100vh - 70px);
                 background: #fff; flex-direction: column; align-items: center; justify-content: start;
@@ -308,15 +316,19 @@
             }
             .nav-links.active { right: 0; }
             .nav-links a { font-size: 1.4rem; width: 100%; text-align: center; display: block; }
+            
             .hero h1 { font-size: 2.8rem; }
             .hero h1 span { font-size: 1.5rem; }
             .hero p { font-size: 1.1rem; padding: 0 10px;}
+            
             .cta-buttons { flex-direction: column; align-items: center; width: 100%; }
             .btn, .btn-outline { width: 80%; margin: 0 0 10px 0 !important; }
             .btn-outline { border-color: #fff; color: #fff; }
+            
             .services-grid { grid-template-columns: 1fr; padding: 0 20px; }
             .brand-item { padding: 0 20px; }
             .marquee-content { animation-duration: 15s; }
+            .logo-image { height: 70px; }
         }
 
         /* ACCESSIBILITY & MODALS */
@@ -426,9 +438,9 @@
                 </div>
             </a>
 
-            <div class="hamburger" onclick="toggleMenu()" aria-label="תפריט">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="פתח תפריט">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
 
             <nav>
                 <ul class="nav-links">
@@ -722,21 +734,19 @@
     </div>
 
     <script>
-        // --- Video Optimization & Init ---
+        // --- Video Init ---
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('heroVideo');
-            // Only play video on larger screens or if not on data saver
             if(video && window.innerWidth > 768) {
                 video.play().catch(() => console.log("Autoplay blocked"));
             }
             checkCookieConsent();
         });
 
-        // --- Marquee Logic (Optimized) ---
+        // --- Marquee Logic ---
         function updateMarqueeHighlight() {
             const items = document.querySelectorAll('.brand-item');
             if(items.length === 0) return;
-            
             const centerScreen = window.innerWidth / 2;
             items.forEach(item => {
                 const rect = item.getBoundingClientRect();
@@ -746,17 +756,17 @@
             });
             requestAnimationFrame(updateMarqueeHighlight);
         }
-        // Only run marquee logic if reduced motion is not preferred
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
              updateMarqueeHighlight();
         }
 
-        // --- Menu Logic ---
+        // --- Menu Logic (FIXED) ---
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             const hamburger = document.querySelector('.hamburger');
             navLinks.classList.toggle('active');
             
+            // Icon toggle
             const icon = hamburger.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
@@ -764,6 +774,8 @@
                 icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
             }
         }
+        
+        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             const navLinks = document.querySelector('.nav-links');
             const hamburger = document.querySelector('.hamburger');
@@ -772,23 +784,7 @@
             }
         });
 
-        // --- Skills Animation (Intersection Observer) ---
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progress = entry.target.querySelector('.progress');
-                        if(progress) progress.style.width = progress.getAttribute('data-width');
-                    }
-                });
-            }, { threshold: 0.5 });
-            document.querySelectorAll('.skill-item').forEach(item => observer.observe(item));
-        } else {
-            // Fallback for very old browsers
-             document.querySelectorAll('.progress').forEach(p => p.style.width = p.getAttribute('data-width'));
-        }
-        
-        // --- Sticky Header (Optimized with requestAnimationFrame) ---
+        // --- Sticky Header ---
         let lastScroll = 0;
         let ticking = false;
         window.addEventListener('scroll', () => {
@@ -808,6 +804,21 @@
                 ticking = true;
             }
         });
+
+        // --- Skills Animation ---
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progress = entry.target.querySelector('.progress');
+                        if(progress) progress.style.width = progress.getAttribute('data-width');
+                    }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('.skill-item').forEach(item => observer.observe(item));
+        } else {
+             document.querySelectorAll('.progress').forEach(p => p.style.width = p.getAttribute('data-width'));
+        }
 
         // --- Accessibility Logic ---
         function toggleAccessibility() {
