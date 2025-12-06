@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>סולטן חשמל ומיזוג – טכנאי מוסמך בירושלים והמרכז</title>
+    <meta name="description" content="סולטן חשמל ומיזוג – טכנאי מוסמך לתיקון והתקנת מזגנים ומוצרי חשמל. שירות מקצועי, נקי ואמין בירושלים, גוש דן והמרכז.">
+    <meta name="keywords" content="סולטן חשמל ומיזוג, טכנאי מזגנים, תיקון מקרר, תיקון מדיח, תיקון מייבש, טכנאי מכונת כביסה, חשמלאי מוסמך, ירושלים, המרכז">
+    <meta name="robots" content="index,follow">
+    <meta name="language" content="he">
+    <meta name="theme-color" content="#00bcd4">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<link rel="icon" href="assets/images/logo-icon.ico">
+
+    <style>
+        /* --- משתנים ועיצוב מודרני (טורקיז וגרפיט) --- */
+        :root {
+            /* פלטת צבעים: מודרני */
+            --primary-color: #00bcd4;      /* טורקיז - צבע המותג הראשי */
+            --secondary-color: #263238;    /* אפור גרפיט כהה - להדגשות וכפתורים */
+            --dark-text: #37474f;          /* אפור כהה לטקסט (רך יותר משחור) */
+            --light-bg: #f9fbfd;           /* רקע תכלת-לבן נקי מאוד */
+            --white: #ffffff;
+            
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif; /* פונט קריא וזורם */
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* הגדרת פונט לכותרות */
+        h1, h2, h3, h4, h5, h6, .btn, .nav-links a, .logo-main, .brand-item span {
+            font-family: 'Heebo', sans-serif;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+        /* --- רכיבים כלליים --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color); /* קו תחתון בטורקיז */
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* כפתורים */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 35px;
+            background: var(--secondary-color); /* כפתור כהה למראה יוקרתי */
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(38, 50, 56, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: var(--primary-color); /* מעבר לטורקיז בהובר */
+            box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+        }
+
+        .btn i { margin-left: 10px; }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #fff;
+            margin-right: 15px;
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .cta-buttons .btn-outline { margin-right: 15px; margin-left: 0; }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+            padding: 10px 0;
+            transition: var(--transition);
+            border-bottom: 3px solid var(--primary-color); /* פס טורקיז עליון */
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-styled {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .logo-image {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            margin-right: 10px;
+        }
+
+        .logo-main {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary-color); /* "סולטן" בטורקיז */
+            letter-spacing: -1px;
+			text-align: center;
+        }
+
+        .logo-sub {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--secondary-color); /* "חשמל ומיזוג" באפור גרפיט */
+        }
+
+        nav { display: flex; align-items: center; }
+        .nav-links { display: flex; gap: 30px; }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary-color); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px; bottom: -2px; right: 0;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            padding: 5px;
+            z-index: 1100;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            height: 100dvh; 
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            /* גרדיאנט מודרני כהה על הוידאו */
+            background: linear-gradient(to bottom, rgba(38, 50, 56, 0.7), rgba(0, 188, 212, 0.3));
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%; left: 50%;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            z-index: 1;
+            padding: 20px;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color); /* הדגשה בטורקיז */
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto; margin-right: auto;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* --- ABOUT --- */
+        .about {
+            padding: 100px 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            z-index: 1;
+        }
+
+        .about-img-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-img-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 20px; left: 20px; width: 100%; height: 100%;
+            border: 3px solid var(--primary-color);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            object-fit: cover;
+            aspect-ratio: 1/1; 
+        }
+
+        .about-text { flex: 1; }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .skills { margin-top: 40px; }
+        .skill-item { margin-bottom: 20px; }
+        
+        .skill-header {
+            display: flex; justify-content: space-between;
+            margin-bottom: 8px; font-weight: 700; color: var(--secondary-color);
+        }
+
+        .progress-bar {
+            width: 100%; height: 10px; background: #e9ecef;
+            border-radius: 5px; overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--primary-color); /* פס התקדמות בטורקיז */
+            width: 0;
+            border-radius: 5px;
+            transition: width 1.5s ease-out;
+        }
+
+        /* --- SERVICES --- */
+        .services {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 188, 212, 0.1);
+            border-top: 4px solid var(--primary-color); /* פס עליון צבעוני בהובר */
+        }
+
+        .icon-box {
+            width: 80px; height: 80px;
+            background: #e0f7fa; /* רקע אייקון בהיר מאוד */
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .icon-box {
+            background: var(--primary-color);
+            color: #fff;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        /* --- GALLERY --- */
+        .gallery-section { padding: 100px 0; background: #fff; }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img { transform: scale(1.05); }
+        
+        .gallery-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            padding: 25px 20px;
+            background: linear-gradient(to top, rgba(38, 50, 56, 0.95) 0%, rgba(38, 50, 56, 0.6) 60%, transparent 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            padding-bottom: 35px;
+            background: linear-gradient(to top, var(--primary-color) 0%, rgba(0,0,0,0.2) 100%);
+        }
+
+        /* --- MARQUEE --- */
+        .brands-section {
+            padding: 60px 0;
+            background: var(--light-bg);
+            overflow: hidden;
+            border-top: 1px solid #eee;
+        }
+        .brands-header { text-align: center; margin-bottom: 40px; font-size: 1.5rem; color: #888; }
+
+        .marquee {
+            display: flex; width: 100%; overflow: hidden;
+            white-space: nowrap; position: relative;
+        }
+        .marquee::before { left: 0; background: linear-gradient(to right, var(--light-bg), transparent); }
+        .marquee::after { right: 0; background: linear-gradient(to left, var(--light-bg), transparent); }
+        .marquee::before, .marquee::after { content: ''; position: absolute; top: 0; width: 100px; height: 100%; z-index: 2; }
+
+        .marquee-content { display: flex; animation: marquee 40s linear infinite; }
+
+        .brand-item {
+            padding: 0 40px;
+            display: flex; flex-direction: column; align-items: center;
+            color: #ccc; transition: 0.3s; opacity: 0.6;
+        }
+        .brand-item img { height: 50px; width: auto; margin-bottom: 10px; filter: grayscale(100%); transition: 0.3s; }
+        .brand-item span { font-weight: 700; font-size: 1.1rem; }
+
+        .brand-item.active, .brand-item:hover { color: var(--primary-color); opacity: 1; transform: scale(1.1); }
+        .brand-item.active img, .brand-item:hover img { filter: grayscale(0%); }
+
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(50%); } }
+
+        /* --- CONTACT --- */
+        .contact {
+            padding: 100px 0;
+            /* רקע כהה ואלגנטי - אפור גרפיט עמוק */
+            background: linear-gradient(135deg, var(--secondary-color), #1a2327);
+            color: #fff; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        
+        .contact .bg-icon {
+            position: absolute; bottom: -50px; left: -50px;
+            font-size: 20rem; color: rgba(0, 188, 212, 0.05); /* טורקיז שקוף */
+            transform: rotate(25deg); pointer-events: none;
+        }
+
+        .contact-grid {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 30px; margin-top: 40px; position: relative; z-index: 2;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 30px; border-radius: 10px;
+            width: 280px; backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .contact-item i { font-size: 2.2rem; margin-bottom: 20px; color: var(--primary-color); }
+        .contact-item h3 { color: #fff; font-size: 1.5rem; margin-bottom: 10px; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a2327; /* כהה מאוד */
+            color: #90a4ae;
+            padding: 40px 0; text-align: center;
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .footer-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #78909c;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* --- WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed; bottom: 25px; left: 25px;
+            background-color: #25d366; color: #FFF;
+            border-radius: 50%; width: 60px; height: 60px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999; transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
+        .whatsapp-pulse {
+            position: absolute; width: 100%; height: 100%;
+            background: #25d366; border-radius: 50%;
+            z-index: -1; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.5); opacity: 0; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- MOBILE --- */
+        @media (max-width: 992px) {
+            .about-content { flex-direction: column; text-align: center; }
+            .about-img-wrapper { width: 80%; margin: 0 auto 40px; }
+            .about-img-wrapper::before { top: 15px; left: 15px; }
+            .section-title { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; margin-right: auto; }
+            nav { position: absolute; }
+			.logo-image { height: 70px; }
+
+            .nav-links {
+                position: fixed; top: 70px; right: -100%;
+                width: 100%; height: calc(100vh - 70px);
+                background: #fff;
+                flex-direction: column; align-items: center; justify-content: start;
+                padding-top: 50px; gap: 30px;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 1000;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.4rem; width: 100%; text-align: center; display: block; }
+
+            .hero h1 { font-size: 2.8rem; }
+            .hero h1 span { font-size: 1.5rem; }
+            .hero p { font-size: 1.1rem; padding: 0 10px;}
+            
+            .cta-buttons { flex-direction: column; align-items: center; width: 100%; }
+            .btn, .btn-outline { width: 80%; margin: 0 0 10px 0 !important; }
+            .btn-outline { border-color: #fff; color: #fff; }
+
+            .services-grid { grid-template-columns: 1fr; padding: 0 20px; }
+            .brand-item { padding: 0 20px; }
+            .marquee-content { animation-duration: 15s; }
+        }
+
+        /* --- עיצוב נגישות --- */
+        .accessibility-btn {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            border-radius: 6px 0 0 6px;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .accessibility-btn:hover { padding-right: 18px; }
+
+        .accessibility-menu {
+            position: fixed;
+            top: 50%;
+            right: -320px; /* מוסתר כברירת מחדל */
+            transform: translateY(-50%);
+            width: 300px;
+            background: #fff;
+            box-shadow: -5px 5px 20px rgba(0,0,0,0.15);
+            padding: 20px;
+            z-index: 9998;
+            border-radius: 8px 0 0 8px;
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .accessibility-menu.active { right: 0; }
+        
+        .acc-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;
+        }
+        .acc-header h3 { font-size: 1.2rem; color: var(--secondary-color); margin: 0; }
+        .acc-close { cursor: pointer; color: #888; font-size: 1.2rem; }
+
+        .acc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        
+        .acc-option {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--light-bg); border: 1px solid #eee;
+            padding: 10px; border-radius: 6px; cursor: pointer;
+            text-align: center; font-size: 0.9rem; color: var(--secondary-color);
+            transition: 0.2s;
+        }
+
+        .acc-option i { font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color); }
+        .acc-option:hover, .acc-option.active { background: #e0f7fa; border-color: var(--primary-color); }
+        
+        /* מחלקות נגישות */
+        html.acc-large-text { font-size: 120%; }
+        html.acc-contrast { filter: contrast(130%); background: #fff; }
+        html.acc-contrast body { background: #fff; color: #000; }
+        html.acc-contrast * { background-color: #fff !important; color: #000 !important; border-color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+        html.acc-contrast .btn, html.acc-contrast i { color: #000 !important; border: 2px solid #000 !important; }
+        
+        html.acc-grayscale { filter: grayscale(100%); }
+        html.acc-links a { text-decoration: underline !important; background: yellow !important; color: black !important; }
+        html.acc-readable-font * { font-family: Arial, Helvetica, sans-serif !important; letter-spacing: 0.5px; }
+
+        /* --- מצב קריאה --- */
+        body.acc-reading-mode { cursor: help !important; }
+        body.acc-reading-mode * { cursor: help !important; }
+        body.acc-reading-mode *:hover { background-color: rgba(255, 235, 59, 0.2) !important; outline: 2px solid rgba(255, 235, 59, 0.5); }
+        
+        /* --- פופאפ עוגיות --- */
+        .cookie-wrapper {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: rgba(0,0,0,0.6); z-index: 10000;
+            display: flex; align-items: flex-end; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all 0.4s;
+        }
+        
+        .cookie-wrapper.show { opacity: 1; visibility: visible; }
+        
+        .cookie-content {
+            background: #fff; width: 100%; max-width: 600px;
+            padding: 25px; margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: right;
+            border-top: 4px solid var(--primary-color);
+            transform: translateY(100px); transition: transform 0.4s;
+        }
+
+        .cookie-wrapper.show .cookie-content { transform: translateY(0); }
+
+        .cookie-header { font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; color: var(--secondary-color); }
+        .cookie-text { font-size: 0.95rem; margin-bottom: 20px; color: #555; }
+        
+        .cookie-options { margin-bottom: 20px; background: var(--light-bg); padding: 15px; border-radius: 8px; display: none; }
+        .cookie-options.visible { display: block; }
+        
+        .cookie-checkbox { display: flex; align-items: center; margin-bottom: 10px; justify-content: space-between; }
+        .cookie-checkbox label { font-weight: 600; color: var(--secondary-color); }
+        .switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: var(--primary-color); }
+        input:checked + .slider:before { transform: translateX(18px); }
+        input:disabled + .slider { opacity: 0.5; cursor: not-allowed; }
+
+        .cookie-buttons { display: flex; gap: 10px; }
+        .cookie-btn {
+            flex: 1; padding: 10px; border-radius: 6px; border: none; font-weight: 700; cursor: pointer; transition: 0.2s;
+        }
+        .btn-accept { background: var(--primary-color); color: #fff; }
+        .btn-accept:hover { background: #00acc1; }
+        .btn-settings { background: #e9ecef; color: var(--secondary-color); }
+        .btn-settings:hover { background: #dde2e6; }
+
+        /* --- עיצוב פופאפ מדיניות פרטיות (חדש) --- */
+        .privacy-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(38, 50, 56, 0.8); z-index: 10001;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .privacy-modal-overlay.active { opacity: 1; visibility: visible; }
+
+        .privacy-modal-content {
+            background: #fff; width: 90%; max-width: 600px;
+            max-height: 80vh; overflow-y: auto;
+            border-radius: 12px; padding: 30px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--primary-color);
+            transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .privacy-modal-overlay.active .privacy-modal-content { transform: scale(1); }
+
+        .close-privacy {
+            position: absolute; top: 15px; left: 15px;
+            font-size: 1.8rem; color: #888; cursor: pointer;
+            width: 35px; height: 35px; line-height: 35px; text-align: center;
+            border-radius: 50%; transition: 0.2s; background: #f5f5f5;
+        }
+        
+        .close-privacy:hover { background: #eee; color: #333; }
+
+        .privacy-text h2 { color: var(--primary-color); margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+        .privacy-text h4 { color: var(--secondary-color); margin: 20px 0 10px; font-size: 1.2rem; }
+        .privacy-text p { color: #555; margin-bottom: 10px; font-size: 0.95rem; text-align: justify; }
+        .privacy-text ul { margin-right: 20px; list-style-type: disc; margin-bottom: 10px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-styled">
+                <img src="assets/images/logo-full.png" alt="סולטן חשמל ומיזוג" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-main">סולטן</span>
+                    <span class="logo-sub">תיקון מוצרי חשמל</span>
+                </div>
+            </a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="toggleMenu()">ראשי</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">אודות</a></li>
+                    <li><a href="#services" onclick="toggleMenu()">שירותים</a></li>
+                    <li><a href="#gallery" onclick="toggleMenu()">עבודות</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">צור קשר</a></li>
+                    <li><a href="tel:0524066783" class="btn-nav" style="color:var(--primary-color); font-weight:700;"><i class="fa-solid fa-phone"></i> 052-406-6783</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        
+        <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg">
+            <source src="assets/videos/hero-video.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בוידאו.
+        </video>
+        
+        <div class="hero-content">
+            <h1>
+                <span>שירות טכנאי מוסמך</span>
+                המומחה שלך למוצרי חשמל
+            </h1>
+            <p>תיקון, התקנה ותחזוקת מזגנים, מקררים ומכונות כביסה. שירות מהיר, נקי ומקצועי בבית הלקוח.</p>
+            <div class="cta-buttons">
+                <a href="tel:+972524066783" class="btn"><i class="fa-solid fa-phone"></i> הזמן טכנאי</a>
+                <a href="#services" class="btn btn-outline">ראה שירותים</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">קצת עלי</div>
+            <div class="about-content">
+                <div class="about-img-wrapper">
+                    <img src="https://images.pexels.com/photos/8985454/pexels-photo-8985454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="דניאל הטכנאי" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h3>סולטן – איכות ללא פשרות</h3>
+                    <p>
+                        כבר למעלה מ-10 שנים שאני דואג שהבית שלכם יחזור לתפקד במהירות. אני מאמין ששירות טוב מתחיל באבחון מדויק ומסתיים בחיוך ובשטח נקי.
+                    </p>
+                    <p>
+                        אני מתמחה בתיקון המותגים המובילים (אלקטרה, תדיראן, LG ועוד), תוך שימוש בכלי עבודה מתקדמים וחלפים איכותיים בלבד.
+                    </p>
+                    
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>אמינות ושקיפות</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="100%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>מקצועיות תיקונים</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">השירותים שלי</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-wind"></i></div>
+                    <h3>תיקון מזגנים</h3>
+                    <p>איתור דליפות גז, החלפת קבלים, ניקוי עמוק ותיקון כרטיסים אלקטרוניים.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                    <h3>מקררים ומקפיאים</h3>
+                    <p>טיפול בבעיות הקפאה, החלפת גומיות איטום, מאווררים ומדחסים.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-shirt"></i></div>
+                    <h3>מכונות כביסה</h3>
+                    <p>פתרון תקלות סחיטה, החלפת משאבות מים, תיקון דלתות וגומיות.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-fire-burner"></i></div>
+                    <h3>מייבשים ותנורים</h3>
+                    <p>החלפת גופי חימום, רצועות ותרמוסטטים להבטחת בטיחות מלאה.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title">תיקונים מהשטח</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/air_condition_fixing.png" alt="תיקון מדחס מזגן">
+                    <div class="gallery-overlay">
+                        <h3>החלפת מדחס</h3>
+                        <p>תיקון יחידה חיצונית והחלפת קבל</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/washing_machine_fixing.png" alt="שיפוץ מכונת כביסה">
+                    <div class="gallery-overlay">
+                        <h3>שיפוץ מכונת כביסה</h3>
+                        <p>החלפת משאבת מים וניקוי פילטר</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/fridge_fixing.png" alt="תיקון מקרר">
+                    <div class="gallery-overlay">
+                        <h3>תיקון מקרר</h3>
+                        <p>טיפול בבריחת גז והחלפת טיימר</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-section">
+        <div class="container">
+            <h3 class="brands-header">מתמחה בתיקון כל המותגים</h3>
+        </div>
+        <div class="marquee">
+            <div class="marquee-content" id="marqueeContent">
+                <div class="brand-item"><img src="https://logo.clearbit.com/electra-air.co.il" alt="Electra"><span>ELECTRA</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/tadiran-international.com" alt="Tadiran"><span>TADIRAN</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/tornado-top.co.il" alt="Tornado"><span>TORNADO</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung"><span>SAMSUNG</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/lg.com" alt="LG"><span>LG</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/bosch.com" alt="Bosch"><span>BOSCH</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/beko.com" alt="Beko"><span>BEKO</span></div>
+                
+                <div class="brand-item"><img src="https://logo.clearbit.com/electra-air.co.il" alt="Electra"><span>ELECTRA</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/tadiran-international.com" alt="Tadiran"><span>TADIRAN</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/tornado-top.co.il" alt="Tornado"><span>TORNADO</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung"><span>SAMSUNG</span></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/lg.com" alt="LG"><span>LG</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <i class="fa-solid fa-screwdriver-wrench bg-icon"></i>
+        <div class="container">
+            <div class="section-title" style="color:white; border-color:white;">דברו איתי</div>
+            <p>תקלה דחופה? המזגן לא מקרר? אל תהססו להתקשר לייעוץ.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <h3>חייגו עכשיו</h3>
+					<p> זמינות 24/6</p>
+                    <p>052-406-6783</p>
+                    <a href="tel:0524066783" class="btn" style="width:auto; font-size:0.9rem;">התקשר</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>וואטסאפ</h3>
+                    <p>שלחו תמונה של התקלה</p>
+                    <a href="https://wa.me/972524066783" class="btn" target="_blank" style="background:#25d366; width:auto; font-size:0.9rem; box-shadow:none;">שלח הודעה</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>אזורי שירות</h3>
+                    <p>ירושלים, גוש דן והמרכז</p>
+					<p>09:00 - 21:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 סולטן תיקון מוצרי חשמל ומיזוג, כל הזכויות שמורות.</p>
+            <div style="margin-top: 15px; font-size: 1.2rem;">
+                <a href="#" style="color:#fff; margin:0 10px;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color:#fff; margin:0 10px;"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="footer-link" onclick="openPrivacyPolicy(); return false;">מדיניות פרטיות</a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/972524066783" class="whatsapp-float" target="_blank">
+        <div class="whatsapp-pulse"></div>
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div class="accessibility-btn" onclick="toggleAccessibility()">
+        <i class="fa-solid fa-universal-access"></i>
+    </div>
+
+    <div class="accessibility-menu" id="accMenu">
+        <div class="acc-header">
+            <h3>כלי נגישות</h3>
+            <span class="acc-close" onclick="toggleAccessibility()"><i class="fa-solid fa-times"></i></span>
+        </div>
+        <div class="acc-options">
+            <div class="acc-option" onclick="toggleReadMode()">
+                <i class="fa-solid fa-volume-high"></i>
+                <span>הקראת טקסט</span>
+            </div>
+            <div class="acc-option" onclick="toggleAccClass('acc-large-text')">
+                <i class="fa-solid fa-font"></i>
+                <span>הגדלת טקסט</span>
+            </div>
+            <div class="acc-option" onclick="toggleAccClass('acc-contrast')">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+                <span>ניגודיות</span>
+            </div>
+            <div class="acc-option" onclick="toggleAccClass('acc-grayscale')">
+                <i class="fa-solid fa-droplet-slash"></i>
+                <span>גווני אפור</span>
+            </div>
+            <div class="acc-option" onclick="toggleAccClass('acc-links')">
+                <i class="fa-solid fa-link"></i>
+                <span>הדגשת קישורים</span>
+            </div>
+            <div class="acc-option" onclick="toggleAccClass('acc-readable-font')">
+                <i class="fa-solid fa-align-right"></i>
+                <span>פונט קריא</span>
+            </div>
+            <div class="acc-option" onclick="resetAccessibility()">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>איפוס</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookie-wrapper" id="cookiePopup">
+        <div class="cookie-content">
+            <div class="cookie-header">אנו מכבדים את הפרטיות שלך</div>
+            <div class="cookie-text">
+                האתר משתמש בעוגיות כדי לשפר את חווית הגלישה. חלקן נחוצות לתפקוד האתר ואחרות לסטטיסטיקה.
+            </div>
+            
+            <div class="cookie-options" id="cookieOptions">
+                <div class="cookie-checkbox">
+                    <label>עוגיות הכרחיות (תמיד פעיל)</label>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-checkbox">
+                    <label>סטטיסטיקה ושיווק</label>
+                    <label class="switch">
+                        <input type="checkbox" id="marketingCookies" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cookie-buttons">
+                <button class="cookie-btn btn-accept" onclick="acceptAllCookies()">אשר הכל</button>
+                <button class="cookie-btn btn-settings" onclick="toggleCookieSettings()">הגדרות</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-modal-overlay" id="privacyModal">
+        <div class="privacy-modal-content">
+            <span class="close-privacy" onclick="closePrivacyPolicy()">&times;</span>
+            <div class="privacy-text">
+                <h2>מדיניות פרטיות</h2>
+                <p>ברוכים הבאים לאתר סולטן חשמל ומיזוג. הפרטיות שלכם חשובה לנו, ומסמך זה נועד להסביר בצורה שקופה איזה מידע אנו אוספים וכיצד אנו משתמשים בו.</p>
+                
+                <h4>1. איסוף מידע</h4>
+                <p>כאשר אתם יוצרים איתנו קשר דרך האתר (טלפון, וואטסאפ או טופס), אנו עשויים לקבל מידע הכולל:</p>
+                <ul>
+                    <li>שם מלא</li>
+                    <li>מספר טלפון</li>
+                    <li>כתובת למתן השירות</li>
+                </ul>
+
+                <h4>2. שימוש בקבצי עוגיות (Cookies)</h4>
+                <p>האתר עושה שימוש בקבצי "עוגיות" (Cookies) על מנת לשפר את חווית המשתמש וליצור סטטיסטיקות שימוש. העוגיות הן קבצי טקסט הנוצרים בדפדפן שלכם.</p>
+                <p>אנו משתמשים בשני סוגי עוגיות:</p>
+                <ul>
+                    <li><strong>עוגיות הכרחיות:</strong> נדרשות לתפעול תקין של האתר (למשל, שמירת העדפות הנגישות שלכם).</li>
+                    <li><strong>עוגיות סטטיסטיקה ושיווק:</strong> (כגון Google Analytics) עוזרות לנו להבין כיצד גולשים משתמשים באתר על מנת לשפר אותו.</li>
+                </ul>
+                <p>ניתן לשנות את הגדרות העוגיות בכל עת דרך כפתור "הגדרות" בפופאפ שקופץ בכניסה לאתר, או דרך הגדרות הדפדפן שלכם.</p>
+
+                <h4>3. אבטחת מידע</h4>
+                <p>אנו נוקטים באמצעי זהירות מקובלים על מנת לשמור, ככל האפשר, על סודיות המידע. המידע האישי שלכם לא יועבר לצד ג' ללא הסכמתכם, אלא אם כן נדרש הדבר עפ"י חוק.</p>
+                
+                <h4>4. יצירת קשר</h4>
+                <p>בכל שאלה בנוגע לפרטיות, ניתן לפנות אלינו בטלפון 052-406-6783.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Video Autoplay Fix ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('heroVideo');
+            if(video) video.play().catch(() => console.log("Autoplay blocked"));
+            
+            // Check Cookie Status on Load
+            checkCookieConsent();
+        });
+
+        // --- Marquee Logic ---
+        function updateMarqueeHighlight() {
+            const items = document.querySelectorAll('.brand-item');
+            const centerScreen = window.innerWidth / 2;
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const itemCenter = rect.left + rect.width / 2;
+                if (Math.abs(centerScreen - itemCenter) < 100) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+            requestAnimationFrame(updateMarqueeHighlight);
+        }
+        updateMarqueeHighlight();
+
+        // --- Menu Logic ---
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars');
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                toggleMenu();
+            }
+        });
+
+        // --- Skills Animation ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progress = entry.target.querySelector('.progress');
+                    progress.style.width = progress.getAttribute('data-width');
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.skill-item').forEach(item => observer.observe(item));
+        
+        // --- Sticky Header ---
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+                header.style.padding = "5px 0";
+            } else {
+                header.style.boxShadow = "0 2px 20px rgba(0,0,0,0.05)";
+                header.style.padding = "10px 0";
+            }
+        });
+
+        // --- Accessibility Logic ---
+        function toggleAccessibility() {
+            document.getElementById('accMenu').classList.toggle('active');
+        }
+
+        function toggleAccClass(className) {
+            document.documentElement.classList.toggle(className);
+            // Highlight active button
+            const btns = document.querySelectorAll('.acc-option');
+            btns.forEach(btn => {
+                if(btn.getAttribute('onclick').includes(className)) {
+                    btn.classList.toggle('active');
+                }
+            });
+        }
+
+        // --- TEXT READER LOGIC (Hebrew Support) ---
+        let isReadingMode = false;
+
+        function toggleReadMode() {
+            isReadingMode = !isReadingMode;
+            document.body.classList.toggle('acc-reading-mode');
+            
+            // Highlight button
+            const btns = document.querySelectorAll('.acc-option');
+            btns.forEach(btn => {
+                if(btn.getAttribute('onclick').includes('toggleReadMode')) {
+                    if(isReadingMode) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                }
+            });
+            
+            // Stop any current speech if turning off
+            if(!isReadingMode) {
+                window.speechSynthesis.cancel();
+            }
+        }
+
+        // Add global click listener for reading
+        document.addEventListener('click', (e) => {
+            if (!isReadingMode) return;
+            
+            // If clicking inside the menu or popup, don't read unless specific
+            if (e.target.closest('.accessibility-menu') || e.target.closest('.accessibility-btn')) return;
+
+            // Prevent default link action when in reading mode
+            e.preventDefault();
+            e.stopPropagation();
+
+            const textToRead = e.target.innerText;
+            if (textToRead && textToRead.trim().length > 0) {
+                speakText(textToRead);
+            }
+        }, true);
+
+        function speakText(text) {
+            window.speechSynthesis.cancel(); // Stop previous
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'he-IL'; // Set Hebrew
+            
+            const voices = window.speechSynthesis.getVoices();
+            const hebrewVoice = voices.find(voice => voice.lang.includes('he'));
+            if(hebrewVoice) utterance.voice = hebrewVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function resetAccessibility() {
+            document.documentElement.className = ''; // Remove all classes from html
+            document.body.classList.remove('acc-reading-mode');
+            isReadingMode = false;
+            window.speechSynthesis.cancel();
+            document.querySelectorAll('.acc-option').forEach(btn => btn.classList.remove('active'));
+        }
+
+        // --- Cookie Logic (48 Hours) ---
+        const CONSENT_KEY = 'sultan_cookie_consent';
+        const CONSENT_TIME_KEY = 'sultan_cookie_time';
+        const EXPIRY_HOURS = 48;
+
+        function checkCookieConsent() {
+            const consentTime = localStorage.getItem(CONSENT_TIME_KEY);
+            
+            if (consentTime) {
+                const now = new Date().getTime();
+                const hoursPassed = (now - parseInt(consentTime)) / (1000 * 60 * 60);
+                
+                if (hoursPassed < EXPIRY_HOURS) {
+                    return; // Consent is still valid
+                }
+            }
+            
+            // If no consent or expired -> Show popup
+            setTimeout(() => {
+                document.getElementById('cookiePopup').classList.add('show');
+            }, 1000);
+        }
+
+        function toggleCookieSettings() {
+            const options = document.getElementById('cookieOptions');
+            const btn = document.querySelector('.btn-settings');
+            
+            if (options.classList.contains('visible')) {
+                saveCookieSettings(); // If open, clicking again saves
+            } else {
+                options.classList.add('visible');
+                btn.innerText = "שמור העדפות";
+                btn.classList.remove('btn-settings');
+                btn.classList.add('btn-accept');
+                document.querySelector('.btn-accept').style.display = 'none'; // Hide 'Accept All' to force save
+            }
+        }
+
+        function acceptAllCookies() {
+            saveConsent(true);
+        }
+
+        function saveCookieSettings() {
+            const marketing = document.getElementById('marketingCookies').checked;
+            saveConsent(marketing);
+        }
+
+        function saveConsent(marketingAllowed) {
+            localStorage.setItem(CONSENT_KEY, JSON.stringify({ necessary: true, marketing: marketingAllowed }));
+            localStorage.setItem(CONSENT_TIME_KEY, new Date().getTime().toString());
+            
+            document.getElementById('cookiePopup').classList.remove('show');
+            
+            // Reload to hide options if reopened
+            setTimeout(() => {
+                const options = document.getElementById('cookieOptions');
+                options.classList.remove('visible');
+                const btn = document.querySelector('.cookie-btn:last-child');
+                btn.innerText = "הגדרות";
+                btn.classList.add('btn-settings');
+                document.querySelector('.btn-accept').style.display = 'block';
+            }, 500);
+        }
+
+        // --- Privacy Modal Logic ---
+        function openPrivacyPolicy() {
+            document.getElementById('privacyModal').classList.add('active');
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacyModal').classList.remove('active');
+        }
+
+        // Close when clicking outside content
+        document.getElementById('privacyModal').addEventListener('click', (e) => {
+            if(e.target.id === 'privacyModal') {
+                closePrivacyPolicy();
+            }
+        });
+    </script>
+</body>
+</html>
